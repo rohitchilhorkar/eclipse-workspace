@@ -1,0 +1,103 @@
+package PhoneBook;
+
+public class PhoneBook {
+
+	private String name;
+	private Contact[] contacts;
+	private int index;
+
+	public PhoneBook() {
+//		this.name = "My PhoneBook";
+//		this.contacts = new Contact[1000];
+		this("My PhoneBook", 1000);
+//		Alternative ShortHand
+//		Can't use name of the constructor, must use PhoneBook
+	}
+	
+	public PhoneBook(String name, int noOfEntries) {
+		this.name = name;
+		this.contacts = new Contact[noOfEntries];
+	}
+	
+	public void add(String name, String mobileNumber, String emailAddress)
+	{	
+		Contact data = new Contact(name, mobileNumber, emailAddress);
+//		contacts[index++] = data;
+		add(data);
+	}
+	
+	private void add(Contact contact) {
+		contacts[index++] = contact;
+	}
+	
+	public void display()
+	{
+		System.out.println("Details of "+name+" PhoneBook!");
+		
+		for (int i = 0; i < contacts.length; i++) {
+			
+			Contact contactInfo = contacts[i];
+			System.out.println("Name: "+ contactInfo.getName());
+			System.out.println("Mobile Number: "+ contactInfo.getMobileNumber());
+			System.out.println("Email: "+ contactInfo.getEmailAddress());
+			System.out.println();
+			
+		}
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Contact[] getContacts() {
+		return contacts;
+	}
+
+	public void setContacts(Contact[] contacts) {
+		this.contacts = contacts;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

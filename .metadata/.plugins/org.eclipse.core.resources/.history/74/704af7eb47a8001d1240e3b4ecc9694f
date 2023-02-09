@@ -1,0 +1,9 @@
+package com.pratiti.spring;
+
+import org.springframework.stereotype.Component;
+
+@Component("currConv") // 
+public class CurrencyConverter {
+
+	public double convert()
+}

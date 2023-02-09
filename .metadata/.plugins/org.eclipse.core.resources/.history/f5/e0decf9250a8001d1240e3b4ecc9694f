@@ -1,0 +1,10 @@
+package com.pratiti.spring;
+
+public class TextEditor {
+
+	public void load(String document) {
+		System.out.println("TextEditor loading the document");
+		SpellChecker a = 
+		a.checkSpellingMistakes(document);
+	}
+}

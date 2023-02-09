@@ -1,0 +1,8 @@
+package com.pratiti.entity;
+
+public class Songs {
+
+	private int songId;
+	
+	
+}

@@ -1,0 +1,8 @@
+package Problems;
+
+public class PracticeInheritance {
+
+	public static void main(String[] args) {
+		
+	}
+}

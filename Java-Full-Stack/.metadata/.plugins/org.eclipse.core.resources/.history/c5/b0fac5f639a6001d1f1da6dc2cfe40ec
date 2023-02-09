@@ -1,0 +1,15 @@
+package ComplaintMgmt;
+
+public class FetchId extends ComplaintBook {
+
+	
+	System.out.println("Information of Complaint with id: " + id );
+	for(int i=0; i<complaintBook.size() ; i++) {
+		Complaints row = complaintBook.get(i);
+		
+		if(row.getComplaintId() == id) {
+			displayComplaintInDetail(row);
+		}
+		
+	}
+}

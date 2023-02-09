@@ -1,0 +1,13 @@
+package Problems;
+
+public class PracticeInheritance {
+
+	public static void main(String[] args) {
+		
+		try {
+			int a = 100/0;
+		}catch(ArithematicException e) {
+			System.out.println("Err!");
+		}
+	}
+}

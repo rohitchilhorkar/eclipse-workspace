@@ -1,0 +1,9 @@
+package Problems;
+
+public class PracticeInheritance {
+
+	private void main() {
+		// TODO Auto-generated method stub
+
+	}
+}

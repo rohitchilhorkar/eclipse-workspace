@@ -1,0 +1,36 @@
+package DSA;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Maps {
+
+	public static void main(String[] args) {
+		
+//		Aadhar Card id Key, Person as Value
+		
+		
+		Map<Long, Person> join = new HashMap<>();
+		
+		join.put(366939473958L, new Person("Rohit", 22));
+		join.put(466939473958L, new Person("Ravi", 24));
+		join.put(566939473958L, new Person("Mohit", 32));
+		join.put(666939473958L, new Person("Ram", 12));
+		
+//		Recommended
+		join.putIfAbsent(666939473958L, new Person("sfsdfsf", 12));
+		
+		Person name = join.get(666939473958L);
+		System.out.println(name.getName());
+		
+//--------------------------------------------------		Printing Separately 
+//		for(Long key : join.keySet()) {
+//			System.out.println(key);
+//		}
+//		for(Person str : join.values()) {
+//			System.out.println(str.getName());
+//		}
+//--------------------------------------------------		Printing Together Using Lambda
+		join.forEach((aadhar, value) -> System.out.println(aadhar + ":::" + value.getName() + "-" + value.getAge()));
+	}
+}

@@ -1,0 +1,10 @@
+package com.pratiti.spring;
+
+
+public class HelloWorld {
+
+	public  String sayHello(String ) {
+		return "HeelloWorld";
+	}	
+
+}

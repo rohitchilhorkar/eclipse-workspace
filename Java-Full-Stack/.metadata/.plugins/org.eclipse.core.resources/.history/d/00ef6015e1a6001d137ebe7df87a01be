@@ -1,0 +1,52 @@
+package com.pratiti.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "Person")
+public class Passport {
+
+	
+	private int passportNumber;
+	private LocalDate issueDate;
+	private LocalDate expiryDate;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "Person_id")
+	private Person personId;
+	
+	public int getPassportNumber() {
+		return passportNumber;
+	}
+	public void setPassportNumber(int passportNumber) {
+		this.passportNumber = passportNumber;
+	}
+	public LocalDate getIssueDate() {
+		return issueDate;
+	}
+	public void setIssueDate(LocalDate issueDate) {
+		this.issueDate = issueDate;
+	}
+	public LocalDate getExpiryDate() {
+		return expiryDate;
+	}
+	public void setExpiryDate(LocalDate expiryDate) {
+		this.expiryDate = expiryDate;
+	}
+	public int getPersonId() {
+		return personId;
+	}
+	public void setPersonId(int personId) {
+		this.personId = personId;
+	}
+	
+	
+	
+}

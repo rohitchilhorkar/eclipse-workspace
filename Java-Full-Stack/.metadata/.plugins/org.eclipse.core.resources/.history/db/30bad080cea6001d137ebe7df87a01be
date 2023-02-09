@@ -1,0 +1,17 @@
+package com.pratiti.entity;
+
+import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "Customer")
+public class Customer {
+
+	private int id;
+	private String name;
+	private String email;
+	private LocalDate dateOfBirth;
+//	Creating relationship between classes, inheritance can't be used since it is a 
+	private Address address = new Address();
+}

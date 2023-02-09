@@ -1,0 +1,19 @@
+package com.pratiti.product.app;
+
+import com.pratiti.dao.PersonDao;
+import com.pratiti.entity.Passport;
+import com.pratiti.entity.Person;
+
+public class PersonApp {
+
+	public static void main(String[] args) {
+		
+	PersonDao dao = new PersonDao();
+	Person person = new Person();
+	person.setName("Rohit Chilhorkar");
+	person.setAge(22);
+	
+	
+	
+	}
+}

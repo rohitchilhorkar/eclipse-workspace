@@ -1,0 +1,8 @@
+package ComplaintMgmt;
+
+public class FetchUsingId {
+
+	public void fetchComplaint(int complaintId) {
+		
+	}
+}

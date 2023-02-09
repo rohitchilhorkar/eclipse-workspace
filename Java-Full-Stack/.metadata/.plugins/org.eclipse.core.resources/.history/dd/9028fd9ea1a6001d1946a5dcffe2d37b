@@ -1,0 +1,49 @@
+package com.pratiti.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tbl_product")
+public class Product {
+	
+	@Id												//for mapping primary key column
+	@GeneratedValue									//Auto-generated primary key
+	@Column(name = "id")							//for mapping this variable to a column
+	private int product_id;
+	
+	@Column(name="name")							//for mapping this variable to a column
+	private String productName;
+	
+	private double price;							//we have same name to same column that's why no @column used
+	private int quantity;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	
+}

@@ -1,0 +1,12 @@
+package com.pratiti.entity;
+
+public class Songs {
+
+	private int songId;
+	private String title;
+	private String artistName;
+	
+	@join
+	private Album albumId;
+	
+}

@@ -1,0 +1,14 @@
+package com.pratiti.entity;
+
+import javax.persistence.JoinColumn;
+
+public class Songs {
+
+	private int songId;
+	private String title;
+	private String artistName;
+	
+	@JoinColumn
+	private Album albumId;
+	
+}

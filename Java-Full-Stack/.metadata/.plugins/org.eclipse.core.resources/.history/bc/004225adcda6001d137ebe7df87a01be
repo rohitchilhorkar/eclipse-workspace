@@ -1,0 +1,7 @@
+package com.pratiti.entity;
+
+public class Address {
+
+	private int id;
+	
+}

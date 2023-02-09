@@ -1,0 +1,52 @@
+package DSA;
+
+import java.util.HashMap;
+import java.util.Map;
+
+class LoginManager{
+private Map<String, String> users;
+	
+	public LoginManager() {
+	users = new HashMap<>();
+	users.put("Rohit", "112233");
+	users.put("Mohit", "222233");
+	users.put("Rovi", "332233");
+	}
+	
+	boolean isValidUser(String username, String password) {
+		
+		boolean yes = false;
+		for(String i : users.keySet())
+		{
+			if(i.equals(username))
+				yes = true;
+			else
+				return false;
+		}
+		if(yes) {
+			for(String i : users.values())
+			{
+				if(i.equals(password))
+					return true;
+			}
+		}
+		return false;
+	
+	}
+	
+}
+
+public class Application2 {
+	
+	public static void main(String[] args) {
+		LoginManager mgr = new LoginManager();
+		boolean isValid = mgr.isValidUser("Rovi", "332233");
+		if(isValid)
+			System.out.println("Success!");
+		else
+			System.out.println("Failure!");
+
+	}
+	
+}
+

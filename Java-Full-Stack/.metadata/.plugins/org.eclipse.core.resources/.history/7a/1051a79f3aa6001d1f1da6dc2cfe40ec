@@ -1,0 +1,5 @@
+package ComplaintMgmt;
+
+public class FetchInfoUsingYear extends Complaint{
+
+}

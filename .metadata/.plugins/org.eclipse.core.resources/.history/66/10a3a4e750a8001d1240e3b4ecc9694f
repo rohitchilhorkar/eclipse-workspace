@@ -1,0 +1,14 @@
+package com.pratiti.spring;
+
+import java.beans.JavaBean;
+
+@JavaBean
+public class TextEditor {
+
+	public void load(String document) {
+		System.out.println("TextEditor loading the document");
+//		SpellChecker a = new SpellChecker();   Replace this line with Spring
+		ctx.get
+		sc.checkSpellingMistakes(document);
+	}
+}

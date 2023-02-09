@@ -1,0 +1,21 @@
+package com.pratiti.entity;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "songs")
+public class Album {
+
+	@Id
+	@GeneratedValue
+	private int albumId;
+	private String name;
+	private LocalDate releaseDate;
+	
+	private LocalDate<Songs> song;
+}

@@ -1,0 +1,8 @@
+package com.pratiti.spring.Banking;
+
+public interface Atm {
+
+	public void isCustomer()
+	public void withdraw(int accNo, double amount);
+	
+}

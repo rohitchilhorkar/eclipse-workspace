@@ -1,0 +1,7 @@
+package com.pratiti.spring.Banking;
+
+@Override
+public interface Bank {
+
+	boolean canWeWithdraw(int atmId, int accNo, double amount);
+}

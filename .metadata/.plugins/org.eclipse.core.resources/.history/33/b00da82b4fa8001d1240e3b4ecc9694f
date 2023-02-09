@@ -1,0 +1,8 @@
+package com.pratiti.spring;
+
+public class SpellChecker {
+
+	public void checkSpellingMistakes(String document) {
+		
+	}
+}

@@ -1,0 +1,84 @@
+package Strings;
+
+public class StringDemo {
+
+	public static void main(String[] args) {
+		
+		String name1 = "rohit";
+		String name2 = "rohit";
+		
+		String name3 = new String("rohit");
+		String name4 = new String("rohit");
+		
+//		In case of objects it compares references;
+		
+		System.out.println(name1 == name2);
+		System.out.println(name3.equals(name4));
+		
+		String name5 = new String("hello");
+		String name6 = new String("world");
+		String name7 = new String("helloworld");
+//		String name8 = name5 + name6;
+		
+//		Strings which are kept in the pool are the ones which are "hardcoded".
+//		Strings which are not kept in the pool are the ones which are declared
+//		at the "runtime", kept in heap
+//		
+		String name8 = (name5 + name6).intern(); //should return true
+		
+//		References of both strings are different since they are different objects 
+		System.out.println(name7.equals(name8));
+		
+				
+//		Understanding String Buffer
+		String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		String newStr = "";
+		
+		long ns1 = System.nanoTime();
+		for (int i = 0; i < str.length(); i++) {
+			for (int j = 0; j <= i; j++) {
+				newStr += str.charAt(i);				
+			}
+		}
+		
+		long ns2 = System.nanoTime();
+		System.out.println("Time Taken: " + (ns2 - ns1));
+		System.out.println(newStr);
+		
+		StringBuffer strBuff = new StringBuffer();
+		
+		long ns3 = System.nanoTime();
+		for (int i = 0; i < str.length(); i++) {
+			for (int j = 0; j <= i; j++) {
+				strBuff.append(str.charAt(j));				
+			}
+		}
+		
+		long ns4 = System.nanoTime();
+		System.out.println("Time Taken: " + (ns4 - ns3));
+		System.out.println("Time Taken is less in String Buffer, Since it is mutable, we are changing the same string again and again, rather than creating a new one each time");
+		
+		
+		System.out.println(newStr);
+		
+StringBuilder strBuff1 = new StringBuilder();
+		
+		long ns5 = System.nanoTime();
+		for (int i = 0; i < str.length(); i++) {
+			for (int j = 0; j <= i; j++) {
+				strBuff1.append(str.charAt(j));				
+			}
+		}
+		
+		long ns6 = System.nanoTime();
+		System.out.println("Time Taken: " + (ns6 - ns5));
+		
+//		String > StringBuffer > StringBuilder
+//		For Concatenating StringBuilder is most efficient
+				
+			
+		
+
+	}
+
+}

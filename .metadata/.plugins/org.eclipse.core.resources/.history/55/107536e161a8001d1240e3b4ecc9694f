@@ -1,0 +1,11 @@
+package com.pratiti.spring.Banking;
+
+import org.springframework.context.ApplicationContext;
+
+public class TestingBankAndAtm {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext ctx = 
+	}
+}

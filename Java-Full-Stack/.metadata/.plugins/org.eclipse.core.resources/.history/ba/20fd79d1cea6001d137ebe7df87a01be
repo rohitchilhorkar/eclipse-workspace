@@ -1,0 +1,26 @@
+package com.pratiti.entity;
+
+import java.time.LocalDate;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "Customer")
+public class Customer {
+
+	private int id;
+	private String name;
+	private String email;
+	private LocalDate dateOfBirth;
+	
+//	private int addId; <---NO NO NO
+//	We must not keep foreign key as member variable in our class
+//	Creating relationship between classes, inheritance can't be used since it is a is-a relationship
+//	Create an Object of a class to be mapped with
+	
+	@OneToOne
+	@JoinColumn()
+	private Address address = new Address();
+}

@@ -1,0 +1,6 @@
+package com.pratiti.spring.Banking;
+
+public interface Bank {
+
+	b canWeWithdraw
+}

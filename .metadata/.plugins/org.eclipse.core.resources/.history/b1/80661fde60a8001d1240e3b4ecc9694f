@@ -1,0 +1,18 @@
+package com.pratiti.spring.Banking;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("hdfcAtm")
+public class HdfcAtm implements Atm{
+	
+	@Autowired
+
+	public void withdraw(int accNo, double amount) {
+		// TODO Auto-generated method stub
+		System.out.println("Withdrawal Request..");
+		bank.w
+		
+	}
+
+}

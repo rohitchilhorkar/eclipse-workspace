@@ -1,0 +1,20 @@
+package com.pratiti.spring;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TestingSpring {
+		
+		public static void main(String[] args) {
+//			Loading Spring
+			ApplicationContext ctx = new ClassPathXmlApplicationContext("springConfig.xml");
+//			accessing the Object
+			HelloWorld hw = (HelloWorld) ctx.getBean("hello");
+			System.out.println(hw.sayHello("Rohit Chilhorkar"));
+			
+			Calci calc = (Calci)ctx.getBean("calci");
+			System.out.println(calc.add(23, 43));
+			System.out.println(calc.add(23, 43));
+		}
+	
+}

@@ -1,0 +1,37 @@
+package DSA;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ListtObject {
+
+	public static void main(String[] args) {
+		
+	List<Person> list3 = new ArrayList<>();
+//	List<Person> list4 = new LinkedList()<>();
+	
+	Person p1 = new Person("Rohit", 23);
+	Person p2 = new Person("Vivek", 22);
+	Person p3 = new Person("Rohan", 24);
+	
+	list3.add(p1);
+	list3.add(p2);
+	list3.add(p3);
+//	list4.add(2, p3);
+	list3.forEach(obj -> System.out.println(obj.getName()+"     "+ obj.getAge()));
+	
+	List<Person> list4 = new ArrayList<>();
+	
+	list4.add(new Person("Rohit", 23));
+
+	list4.add(new Person("Rohit",23));
+	list4.add(new Person("Rohan",45));
+	list4.add(new Person("Raj",35));
+	list4.add(new Person("Ram",65));
+	list4.add(new Person("Rohit",4));
+	
+	
+	}
+	
+}

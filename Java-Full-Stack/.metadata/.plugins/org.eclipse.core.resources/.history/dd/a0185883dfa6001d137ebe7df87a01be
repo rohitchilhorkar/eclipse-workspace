@@ -1,0 +1,99 @@
+package com.pratiti.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import com.pratiti.entity.Address;
+import com.pratiti.entity.Customer;
+import com.pratiti.entity.Passport;
+
+public class PersonDao {
+
+	public void add(Person person) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(person); //persist will generate insert query
+		em.getTransaction().commit();
+		emf.close();
+	}
+	
+	public void add(Passport passport) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+		EntityManager em = emf.createEntityManager();
+		em.getTransaction().begin();
+		em.persist(passport); //persist will generate insert query
+		em.getTransaction().commit();
+		emf.close();
+	}
+	public Person fetchPerson(int id) {
+		
+		EntityManagerFactory emf = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+			EntityManager em = emf.createEntityManager();
+			Person person = em.find(Person.class, id);
+			return person;
+		}
+		finally {
+			emf.close();
+		}
+	}
+	public Passport fetchPassport(int passportId) {
+		
+		EntityManagerFactory emf = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+			EntityManager em = emf.createEntityManager();
+			Passport passport = em.find(Address.class, passportId);
+			return address;
+		}
+		finally {
+			emf.close();
+		}
+	}
+	public List<Customer> fetchAllCustomers(){		
+		
+		EntityManagerFactory emf = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+			EntityManager em = emf.createEntityManager();
+			Query q = em.createQuery("select p from Customer p"); //hibernate query language/java persistence ql
+			List<Customer> list = q.getResultList();
+			return list;
+		}
+		finally {
+			emf.close();
+		} 		
+	}
+	public void Update(Customer customer) {
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+		EntityManager em = emf.createEntityManager();
+//		Must write for TCL, for security purpose
+		em.getTransaction().begin();
+		
+		em.merge(customer); //persist will generate insert query
+		
+		em.getTransaction().commit();
+		emf.close();
+	}
+	public List<Address> fetchAllAddress(){		
+		
+		EntityManagerFactory emf = null;
+		try {
+			emf = Persistence.createEntityManagerFactory("hibernate_introduction");
+			EntityManager em = emf.createEntityManager();
+			Query q = em.createQuery("select p from Address p"); //hibernate query language/java persistence ql
+			List<Address> list = q.getResultList();
+			return list;
+		}
+		finally {
+			emf.close();
+		} 
+		
+	}
+}

@@ -1,0 +1,13 @@
+package PhoneBook;
+
+public class Pbtest {
+	public static void main(String args[]) {
+		PhoneBook a = new PhoneBook("Kaminey", 3);
+		System.out.println(a.getName());
+		
+		a.add("Rohit", "8308745001", "rdchilhorkar@gmail.com");
+		a.add("Vaishnavi", "4354353425", "vrchilhorkar@gmail.com");
+		a.add("Vivek", "9354745001", "vrchilhorkar@gmail.com");
+		a.display();
+	}
+}

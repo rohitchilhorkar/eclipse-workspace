@@ -1,0 +1,24 @@
+package abc;
+
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class FirstProgram {
+
+	public static void main(String[] args) {
+		
+		Connection conn = null;
+		try {
+//			Loading the Driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Connecting to Database
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pratitidb", "root", "Rdc@1437801");
+			System.out.println("Connected!!!!!");
+		}
+		catch(ClassNotFoundException e) {
+			System.out.println("Driver Not Found!");
+		}
+		catch()
+	}
+}

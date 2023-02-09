@@ -1,0 +1,9 @@
+package com.pratiti.entity;
+
+public class Passport {
+
+	private int passportNumber;
+	private LocalDate issueDate;
+	private int age;
+	
+}

@@ -1,0 +1,14 @@
+package com.pratiti.spring.Banking;
+
+import org.springframework.stereotype.Component;
+
+@Component()
+public class IciciBank implements Bank{
+
+	public boolean canWeWithdraw(int atmId, int accNo, double amount) {
+		// TODO Auto-generated method stub
+		System.out.println("Withdrwal Approved!!");
+		return true;
+	}
+
+}

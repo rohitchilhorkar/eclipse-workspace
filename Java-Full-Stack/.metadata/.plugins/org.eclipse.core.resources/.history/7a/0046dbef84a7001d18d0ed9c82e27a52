@@ -1,0 +1,68 @@
+package com.pratiti.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "songs")
+public class Song {
+
+	@Id
+	@GeneratedValue (strategy = )
+	private int songId;
+	private String title;
+	private String artistName;
+	
+	
+	@ManyToOne
+	@JoinColumn(name = "albumId")	//Primary Key will be kept in it	
+	private Album albumId;
+
+
+	public int getSongId() {
+		return songId;
+	}
+
+
+	public void setSongId(int songId) {
+		this.songId = songId;
+	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public String getArtistName() {
+		return artistName;
+	}
+
+
+	public void setArtistName(String artistName) {
+		this.artistName = artistName;
+	}
+
+
+	public Album getAlbumId() {
+		return albumId;
+	}
+
+
+	public void setAlbumId(Album albumId) {
+		this.albumId = albumId;
+	}
+	
+	
+	
+	
+}

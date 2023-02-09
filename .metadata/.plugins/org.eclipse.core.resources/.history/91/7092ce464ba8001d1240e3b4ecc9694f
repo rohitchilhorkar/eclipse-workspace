@@ -1,0 +1,8 @@
+package com.pratiti.spring;
+
+public class PrintKey {
+
+	public void printKeyword(String keyword) {
+		System.out.println();
+	}
+}

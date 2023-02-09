@@ -1,0 +1,59 @@
+package com.pratiti.product.app;
+
+import java.time.LocalDate;
+import java.util.List;
+import com.pratiti.dao.CustomerAddressDao;
+import com.pratiti.entity.Address;
+import com.pratiti.entity.Customer;
+
+public class CustomerAddressApp {
+
+	public static void main(String[] args) {
+//		Scenario: Adding Customer
+		CustomerAddressDao dao = new CustomerAddressDao();
+		Customer customer = new Customer();
+//		customer.setName("Rohan Chilhorkar");
+//		customer.setEmail("rohanchilhorkar@gmail.com");		 
+//		customer.setDateOfBirth(LocalDate.of(2003, 4, 23));		
+//		dao.add(customer);
+//		customer = dao.fetchCustomer(64);
+		Address address = new Address();
+//		address.setCity("Mumbai");
+//		address.setLine1("nlkdsnklfnffsknfs");
+//		address.setLine2("sdfsdfs");
+//		address.setPinCode(445001);		
+////		Linking both the tables 
+//		customer.setAddress(address);
+//		
+//		dao.Update(customer);
+//		dao.add(address);
+		
+		
+//		Printing all customers
+		List<Customer> cust = dao.fetchAllCustomers();
+		for(Customer a : cust) {
+			System.out.println(a.getName());
+			System.out.println(a.getEmail());
+			System.out.println(a.getDateOfBirth());
+		}
+//		Printing customers with city name
+		List<Customer> customerinfo = dao.fetchCustomerByCity("pune");
+		System.out.println("----------------------------Fetching all customers with city as Pune------------------------------------------");
+		for(Customer a : customerinfo) {
+			System.out.println(a.getName());
+			System.out.println(a.getEmail());
+			System.out.println(a.getDateOfBirth());
+		}
+		List<Object[]> customerparam = dao.;
+		System.out.println("----------------------------Fetching all customers with city as Pune------------------------------------------");
+		for(Object[] a : customerparam) {
+			
+			System.out.println(a[0]);
+			System.out.println(a[1]);
+			System.out.println(a[2]);
+		}
+			
+	}
+}
+
+

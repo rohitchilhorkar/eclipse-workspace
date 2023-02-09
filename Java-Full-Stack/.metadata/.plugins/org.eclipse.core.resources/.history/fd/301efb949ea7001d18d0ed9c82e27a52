@@ -1,0 +1,92 @@
+package com.pratiti.product.app;
+
+import java.time.LocalDate;
+
+import com.pratiti.dao.AlbumSongDao;
+import com.pratiti.entity.Album;
+import com.pratiti.entity.Song;
+
+
+
+public class AlbumSongTesting {
+
+	public static void main(String[] args) {
+		
+//		addAlbum("Motivational Songs",  LocalDate.of(2015, 4, 21), "Motive Series");
+//		addAlbum("Fearless",  LocalDate.of(2016, 5, 12), "FieryMusic");
+//		
+//		addSongs("Kesariya", "Arijit Singh");
+//		addSongs("Rang lageya", "Ankit Tiwari");
+		
+		AlbumSongDao dao = new AlbumSongDao();
+		Album album = new Album();
+		Album album2 = (Album)dao.fetchAll(Album.class, 1);
+		
+		System.out.println(album2.getName());
+			
+//		
+		
+	}
+	public static void addAlbum(String name, LocalDate date, String copyright) {
+		AlbumSongDao dao = new AlbumSongDao();
+		Album album = new Album();
+		album.setName(name);
+		album.setReleaseDate(date);
+		album.setCopyright(copyright);
+		dao.save(album);
+	}
+	public static void addSongs(String title, String artistName) {
+		AlbumSongDao dao = new AlbumSongDao();
+		Album album = (Album)dao.fetchId(Album.class, 1);
+		Song song = new Song();
+		song.setTitle(title);
+		song.setArtistName(artistName);
+		song.setAlbumId(album);
+		dao.save(song);			
+	}
+	public static void addAlbumAlongWithSongs() {
+		
+		AlbumSongDao dao = new AlbumSongDao();
+		
+		Album album = new Album();
+		album.setName("HIts of 2022");
+		album.setReleaseDate(LocalDate.of(2012, 1, 21));
+		album.setCopyright("Amazon Music");
+		
+		Song song1 = new Song();
+		song1.setTitle("Raatan Lambiya");
+		song1.setArtistName("Tanishq Baghchi");
+		song1.setAlbumId(album);
+		
+		Song song2 = new Song();
+		song2.setTitle("All Black");
+		song2.setArtistName("Guru Randhawa");
+		song2.setAlbumId(album);
+		
+		List<//$NON-NLS-$>
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

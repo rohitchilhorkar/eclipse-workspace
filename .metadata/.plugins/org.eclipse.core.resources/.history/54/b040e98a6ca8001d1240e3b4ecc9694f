@@ -1,0 +1,7 @@
+package com.pratiti.spring.with.database.mysql;
+
+public interface CarPartsInventory {
+
+	public void addNewPart(CarPart carPart);
+	
+}

@@ -1,0 +1,11 @@
+package com.pratiti.spring.Banking;
+
+public class IciciBank implements Bank{
+
+	public boolean canWeWithdraw(int atmId, int accNo, double amount) {
+		// TODO Auto-generated method stub
+		System.out.println("Withdr");
+		return false;
+	}
+
+}

@@ -1,0 +1,12 @@
+package ComplaintMgmt;
+
+public class fetchInfoUsingBankName extends ComplaintBook {
+	
+	fetchInfoUsingBankName(Complaints obj) {
+		super(obj);
+		// TODO Auto-generated constructor stub
+	}
+
+	void fetchInfoUsingBankName
+
+}

@@ -1,0 +1,13 @@
+package ComplaintMgmt;
+
+public class FetchInfoUsingYear extends ComplaintBook{
+
+	FetchInfoUsingYear(Complaints obj) {
+		super(obj);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+	
+}

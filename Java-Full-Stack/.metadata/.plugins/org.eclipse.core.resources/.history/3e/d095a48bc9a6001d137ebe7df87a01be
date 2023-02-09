@@ -1,0 +1,66 @@
+package com.pratiti.product.app;
+
+import java.util.List;
+
+import com.pratiti.dao.ProductDao;
+import com.pratiti.entity.Product;
+
+public class ProductApp {
+
+	public static void main(String[] args) {
+		ProductDao call = new ProductDao();
+//		--------------------------------------------Adding Product-----------------------------------------------------------
+//		Product obj = new Product();		
+//		obj.setName("HP AndroidBook");
+//		obj.setPrice(34400);
+//		obj.setQuantity(8);
+//		call.add(obj);
+//		
+//		<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Fetch Values with id>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		Product product = call.fetch(4);
+		System.out.println(product.getName());
+		System.out.println(product.getPrice());
+		System.out.println(product.getPrice());
+		System.out.println(product.getPrice());
+		System.out.println(product.getQuantity());
+		
+////		<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Update the Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		
+		System.out.println("-----------------------------Discounted Price--------------------------------");
+		System.out.println(product.getPrice());
+		product.setPrice(product.getPrice() - product.getPrice() * 0.10);
+		System.out.println(product.getPrice());
+////		<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Delete Value using name>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		
+		
+		call.Delete(15);
+		
+////		<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Fetch ALL Values>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		List<Product> list2 = call.fetchAll();
+		for(Product i : list2) {
+			System.out.println();
+			System.out.print(i.getName() + "  ");
+			System.out.print(i.getPrice() + "  ");
+			System.out.print(i.getQuantity() + "  ");
+		}
+//		
+////		<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Fetch Values based on Price>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		List<Product> list3 = call.fetchByPrice(13000);
+		for(Product i : list3) {
+			System.out.println();
+			System.out.print(i.getName() + "  ");
+			System.out.print(i.getPrice() + "  ");
+			System.out.print(i.getQuantity() + "  ");
+		}
+////		<<<<<<<<<<<<<<<<<<<<<<<<<<<    <<<<<<<<Fetch Values based on Name>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		List<Product> list4 = call.fetchByName("note");
+		for(Product i : list4) {
+			System.out.println();
+			System.out.print(i.getName() + "  ");
+			System.out.print(i.getPrice() + "  ");
+			System.out.print(i.getQuantity() + "  ");
+		}
+		
+	}
+}
+
