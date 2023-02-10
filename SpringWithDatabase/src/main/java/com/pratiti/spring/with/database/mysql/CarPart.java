@@ -8,6 +8,11 @@ public class CarPart {
 	private double price;
 	private int quantity;
 	
+	
+	public CarPart() {
+		
+	}
+		
 	public int getPartNo() {
 		return partNo;
 	}

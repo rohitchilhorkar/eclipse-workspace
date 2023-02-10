@@ -10,9 +10,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.annotation.ScannedGenericBeanDefinition;
+import org.springframework.stereotype.Component;
 
-public class CarPartsInventoryImpl1 implements CarPartsInventory{
-	
+@Component("cpInv1")
+public class CarPartsInventoryImpl1 implements CarPartsInventory{	
 	
 	public void addNewPart(CarPart carPart) {
 		Connection conn = null;
@@ -22,7 +23,6 @@ public class CarPartsInventoryImpl1 implements CarPartsInventory{
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pratitidb", "root", "Rdc@1437801");
 				String sql = "insert into inventory(part_name, car_model, price, quantity) values(?,?,?,?)";
 				stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-				ResultSet generatedKey = null;
 			
 				stmt.setString(1, carPart.getPartName());
 				stmt.setString(2, carPart.getCarModel());
@@ -32,9 +32,6 @@ public class CarPartsInventoryImpl1 implements CarPartsInventory{
 				int count = stmt.executeUpdate();
 				if(count == 1)System.out.println("Record Inserted with: ");
 				
-				generatedKey = stmt.getGeneratedKeys();
-				if(generatedKey != null && generatedKey.next())
-					System.out.println("Primary Key as: " + generatedKey);
 				System.out.println("Thankyou for inserting the data!");
 		}
 		catch(ClassNotFoundException e) {
