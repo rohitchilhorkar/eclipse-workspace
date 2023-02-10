@@ -9,8 +9,7 @@ import org.springframework.stereotype.Component;
 public class HdfcAtm implements Atm{
 	
 	@Autowired
-	private List<Bank> bank;
-	
+	private List<Bank> bank;	
 
 	public void withdraw(int accNo, double amount) {
 		// TODO Auto-generated method stub
