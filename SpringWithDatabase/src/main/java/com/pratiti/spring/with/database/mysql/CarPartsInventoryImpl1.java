@@ -6,11 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.annotation.ScannedGenericBeanDefinition;
 import org.springframework.stereotype.Component;
+
+import com.mysql.cj.Query;
 
 @Component("cpInv1")
 public class CarPartsInventoryImpl1 implements CarPartsInventory{	
@@ -47,6 +50,45 @@ public class CarPartsInventoryImpl1 implements CarPartsInventory{
 	}
 	
 	public List<CarPart> getAvailableParts(){
-		return null;
+		
+		Connection conn = null;
+		List<CarPart> list = new ArrayList<CarPart>();
+		try {
+			
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pratitidb", "root", "Rdc@1437801");
+			PreparedStatement stmt = conn.prepareStatement("select * from inventory");
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()) {
+				CarPart obj = new CarPart();
+				obj.setPartNo(rs.getInt(1));//column name can be replaced in parameter
+				obj.setPartName(rs.getString(2));
+				obj.setCarModel(rs.getString(3));
+				obj.setPrice(rs.getDouble(4));
+				obj.setQuantity(rs.getInt(5));
+				list.add(obj);
+			}		
+			return list;	
+		}
+		catch(ClassNotFoundException e) {
+				e.printStackTrace();
+				return null;
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		finally {			
+			try{
+				conn.close();
+				}
+			catch(Exception e){
+				
+				}
+			
+		}
+				
+
 	}
 }
