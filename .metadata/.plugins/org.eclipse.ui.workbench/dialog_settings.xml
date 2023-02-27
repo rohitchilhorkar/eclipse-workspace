@@ -23,7 +23,7 @@
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
 		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 		<list key="orderedElements">
-			<item value="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.tm4e.ui.preferences.ThemePreferencePage)"/>
+			<item value="org.eclipse.ui.window.preferences(preferencePageId=org.eclipse.ui.preferencePages.Keys)"/>
 			<item value="TestingCarParts/debug"/>
 			<item value="org.eclipse.oomph.setup.RecorderPreferencePage"/>
 		</list>
@@ -38,7 +38,7 @@
 			<item value="1"/>
 		</list>
 		<list key="textArray">
-			<item value="theme"/>
+			<item value="keys"/>
 			<item value="carp"/>
 			<item value="prefere"/>
 		</list>

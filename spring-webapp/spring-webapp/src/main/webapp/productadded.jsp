@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Product Added Successfully..!</h1>
+<h1>Your Product Id is: ${ id }</h1>
 </body>
 </html>

@@ -7,6 +7,7 @@ jsp file - controller, Class, Repository
 1. Write frontend code first.
 	- Add name attribute to map the input field with column name.
 	- Add action attribute in the form tag. It must be same as mentioned in controller class.
+		- It is responsible for taking the control to controller class.
 	- Add type as submit in the button.
 	
 2. Write class for Product.
@@ -25,5 +26,14 @@ jsp file - controller, Class, Repository
 4. Write Controller -> Give Mapping, 
 					-> Save it using object of Repo interface
 					-> return jsp file(String will be return type) "filename.jsp";
+					
+Q] How to display id?
+using map, mapping that object and using ${var name} in jsp page.
+
+Q] How to search for a product?
+- Create a jsp, with form 
+- Take email as input
+- Write Query inside repository interface.
+
 					
 					
