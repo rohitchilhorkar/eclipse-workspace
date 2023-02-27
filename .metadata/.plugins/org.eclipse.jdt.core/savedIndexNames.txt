@@ -2,11 +2,8 @@ INDEX VERSION 1.131+C:\Users\rdchi\eclipse-workspace\.metadata\.plugins\org.ecli
 1865797976.index
 1357830981.index
 2005616379.index
-3731512720.index
 1956482712.index
 2416386577.index
-2387821104.index
 378338639.index
 2844254110.index
-2123971367.index
 1794832342.index

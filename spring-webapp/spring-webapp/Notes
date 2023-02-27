@@ -1,0 +1,29 @@
+How to write a code?
+
+frontend - entity/logic - backend
+jsp file - controller, Class, Repository
+					   Product
+
+1. Write frontend code first.
+	- Add name attribute to map the input field with column name.
+	- Add action attribute in the form tag. It must be same as mentioned in controller class.
+	- Add type as submit in the button.
+	
+2. Write class for Product.
+	- Add Annotations: 
+		- Entity
+		- Table
+		- Id
+		- GeneratedValue
+	- Generate Getters and Setters.
+	
+3. Write repository code.
+	-JpaRepository will have two parameter 
+		1. Class Name
+		2. Integer
+		
+4. Write Controller -> Give Mapping, 
+					-> Save it using object of Repo interface
+					-> return jsp file(String will be return type) "filename.jsp";
+					
+					

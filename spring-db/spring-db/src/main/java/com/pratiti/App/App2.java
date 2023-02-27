@@ -17,12 +17,12 @@ public class App2 {
 		
 		//Entity class object are not created using spring
 	
-//		CarPart cp = new CarPart();
-//		cp.setPartName("Seat cover");
-//		cp.setCarModel("");
-//		cp.setPrice(5000);
-//		cp.setQuantity(990);
-//		cpRepo.save(cp);
+		CarPart cp = new CarPart();
+		cp.setPartName("Seat cover");
+		cp.setCarModel("");
+		cp.setPrice(5000);
+		cp.setQuantity(990);
+		cpRepo.save(cp);
 		
 		List<CarPart>list = (List<CarPart>) cpRepo.findAll();
 		for(CarPart c : list) {
