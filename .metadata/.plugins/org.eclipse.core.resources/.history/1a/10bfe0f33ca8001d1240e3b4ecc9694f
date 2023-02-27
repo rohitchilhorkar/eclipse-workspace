@@ -1,8 +1,0 @@
-package com.pratiti.spring;
-
-public class TestingSpring {
-
-	public static void main(String[] args) {
-		
-	}
-}

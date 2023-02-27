@@ -8,12 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-
-import org.springframework.context.annotation.ScannedGenericBeanDefinition;
 import org.springframework.stereotype.Component;
-
-import com.mysql.cj.Query;
 
 @Component("cpInv1")
 public class CarPartsInventoryImpl1 implements CarPartsInventory{	

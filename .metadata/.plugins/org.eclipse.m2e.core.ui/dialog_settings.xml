@@ -60,6 +60,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="Employee-Hibernate-Spring"/>
 			<item value="SpringDb"/>
 			<item value="S"/>
 			<item value="Spring"/>
@@ -68,6 +69,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Employee-Hibernate-Spring"/>
 			<item value="SpringWithDatabase"/>
 			<item value="S"/>
 			<item value="SpringBoot"/>

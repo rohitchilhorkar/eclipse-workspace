@@ -1,14 +1,33 @@
 package com.pratiti.spring.with.database.mysql;
 
-public class CarPart {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "inventory")
+public class CarPart {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "part_no")
 	private int partNo;
+	
+	@Column(name = "part_name")
 	private String partName;
+	
+	@Column(name = "car_model")
 	private String carModel;
+	
+	@Column(name = "price")
 	private double price;
-	private int quantity;
 	
-	
+	@Column(name = "quantity")
+	private int quantity;	
+
 	public CarPart() {
 		
 	}

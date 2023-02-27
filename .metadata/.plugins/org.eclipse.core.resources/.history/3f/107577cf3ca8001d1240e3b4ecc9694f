@@ -1,6 +1,0 @@
-package com.pratiti.spring;
-
-public class Calci {
-	
-	public void add(int a, int b) {
-}

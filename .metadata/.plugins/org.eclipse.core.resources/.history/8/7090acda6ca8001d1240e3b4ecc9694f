@@ -1,8 +1,0 @@
-package com.pratiti.spring.with.database.mysql;
-
-public class CarPart {
-
-	private int partNo;
-	private String partName;
-	private
-}

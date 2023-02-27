@@ -1,8 +1,0 @@
-package com.pratiti.spring;
-
-public class TextEditor {
-
-	public void load(String document) {
-		System.out.println();
-	}
-}
