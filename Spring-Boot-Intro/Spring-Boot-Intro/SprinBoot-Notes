@@ -1,3 +1,14 @@
 How to run SpringBoot Project?
 	- From the main file, like we do in react
 	- SpringBootIntroApplication.java:  src/main/java/com.springboot>
+	
+Rest API:: Will send the Json file to client
+-- SpringBoot doesn't have jsp file.
+-- we return string directly not an jsp file.
+
+--> JSP change to SpringBoot
+
+--> @Controller change to @RestController
+
+--> Instead of @RequestMapping("/") we will use HTTP protocol method
+	@GetMapping, @PostMapping
