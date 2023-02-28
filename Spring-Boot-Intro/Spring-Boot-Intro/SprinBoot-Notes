@@ -12,3 +12,14 @@ Rest API:: Will send the Json file to client
 
 --> Instead of @RequestMapping("/") we will use HTTP protocol method
 	@GetMapping, @PostMapping
+	
+--------------PNR Controller Code----------
+After adding all the annotations, we have to give the input to that function,
+	- It can be passed in url itself after appending ?parmeter_name=213
+	- Output will be in JSON format.[By Default].
+	- Input can be given through the URL, weatherapi also works in the same way
+	"https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={API key}"
+	 - If we explicitly write @requestParam("name_to_pass"), then strictly, we must use this name
+	 
+@CrossOrigin must be added in order 
+	
