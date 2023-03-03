@@ -11,3 +11,6 @@ public class SpringBootIntroApplication {
 	}
 
 }
+
+//An internal error occurred during: "Launching Spring-Boot-Intro".
+//org/eclipse/m2e/internal/maven/listener/M2EMavenBuildDataBridge$MavenProjectBuildData

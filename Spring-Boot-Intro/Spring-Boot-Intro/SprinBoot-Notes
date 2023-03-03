@@ -10,6 +10,8 @@ Rest API:: Will send the Json file to client
 
 --> @Controller change to @RestController
 
+"RestController" is a Spring annotation that is used to build REST API in a declarative way. RestController annotation is applied to a class to mark it as a request handler, and Spring will do the building and provide the RESTful web service at runtime.
+
 --> Instead of @RequestMapping("/") we will use HTTP protocol method
 	@GetMapping, @PostMapping
 	
@@ -23,3 +25,127 @@ After adding all the annotations, we have to give the input to that function,
 	 
 @CrossOrigin must be added in order 
 	
+SpringBoot Contains files like-->
+	- Controller ::
+	- Entity	 :: Use to move the information to and from the DB.
+	- Repository :: Talks with DataBase a.k.a "Dao" : Data Access Object
+	- Model      ::
+	- Service    :: Business Logic, works with repository
+	"file:///C:/Users/rdchi/eclipse-workspace/Spring-Boot-Intro/Spring-Boot-Intro/End%20to%20End%20FlowChart.png"
+---------------------------------------------------------------------------------------------------------------------------
+												Customer - Address - Hibernate
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				
+1	Make two entities Customer and Address.
+2	Map them to each other.
+3	Insert Getters and Setters.
+4	Make Repositories a.k.a Dao.
+5	No. of Entity = No. of Dao Class.
+6	public interface AddressRepo extends JpaRepository<Address, Integer>: here second parameter is   	DataType of Primary Key
+7	Make Service Class to write business logic
+8	Make Controller Class to make request. 
+
+===========================================================================================================================
+										Methods like findByEmail, findByVariableName.. 
+									These methods are by default made ready by the JpaRepository
+===========================================================================================================================
+
+All the settings for SpringBoot are done inside the "application.properties" file.
+
+
+				================================================================
+				|	Client <-------------> Server							   |
+				|	Methods:												   |
+				|	Get --> Used to fetch, data can be sent in the url itself
+			    |		 requests a representation of the specified resource.
+				|	Post ---> Used to send data, can be sent in body           |
+				|	Put --->                                                   |
+				|	Delete -->                                                 |
+				================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
